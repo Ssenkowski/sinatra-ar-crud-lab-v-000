@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   end
 
   def save
-
+    self.class.all << self
   end
 
 end
