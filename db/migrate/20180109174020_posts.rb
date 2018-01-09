@@ -1,5 +1,7 @@
 class Posts < ActiveRecord::Migration
   def change
-    create 
+    create_table :posts do |c|
+      c.string :name
+      c.string :content
   end
 end
