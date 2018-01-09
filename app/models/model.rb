@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   attr_accessor :name, :content
 
   def self.all
-    @@all = []
+    @@all ||= []
   end
   def initialize(opts={})
     @name, @content = opts[:name], opts[:content]
