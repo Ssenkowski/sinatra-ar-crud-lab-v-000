@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   get '/posts' do
     @posts = Post.all
     binding.pry
-      @posts.map { |post| post{params[:name]} post{params[:content]}}
+      #@posts.map { |post| post{params[:name]} post{params[:content]}}
 
     erb :index
   end
