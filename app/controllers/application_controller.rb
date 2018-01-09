@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts' do
-    @posts = Post.all
+    @posts = Post.create(params)
     binding.pry
       #@posts.map { |post| post{params[:name]} post{params[:content]}}
 
