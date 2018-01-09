@@ -11,11 +11,9 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post '/posts' do
-    @posts = Post.create(params)
+  get '/posts' do
+    @posts = Post.all
     binding.pry
-      #@posts.map { |post| post{params[:name]} post{params[:content]}}
-
     erb :index
   end
 end
